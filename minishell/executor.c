@@ -61,6 +61,8 @@ int execute(char *args[])
     }
     else if (pid == 0)
     {
+        printf("Child PID: %d\n", getpid());
+        printf("Child Parent PID: %d\n", getppid());
         execvp(args[0], args);
         perror("execvp");
         exit(1);

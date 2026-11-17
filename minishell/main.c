@@ -6,6 +6,9 @@
 
 int main()
 {
+    printf("Mini Shell PID: %d\n", getpid());
+    printf("Mini Shell Parent PID: %d\n", getppid());
+
     char line[1024];
     char cwd[1024];
     char *args[100];
